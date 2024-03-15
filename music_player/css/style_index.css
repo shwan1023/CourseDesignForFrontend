@@ -1,0 +1,306 @@
+
+body {
+  /* 设置行高 */
+  line-height: 1.6;
+  /* 设置文字颜色为白色 */
+  color: #fff;
+  /* 设置背景颜色为黑色 */
+  background: #000;
+  /* 设置字体大小为18像素 */
+  font-size: 18px;
+  /* 设置字体粗细 */
+  font-weight: 400;
+  /* 设置字体 */
+  font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", sans-serif !important;
+  /* 在 WebKit 渲染引擎下文本的抗锯齿效果为 antialiased */
+  -webkit-font-smoothing: antialiased;
+  /* 在 Firefox 浏览器上 Mac OS X 下的文本渲染方式为 grayscale */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 当 body 标签有 stop 类时，隐藏溢出内容 */
+body.stop {
+  overflow: hidden;
+}
+
+/* 页面元素样式 */
+#page {
+  /* 设置元素为相对定位 */
+  position: relative;
+  /* 设置过渡效果，持续1秒，使用 ease-in-out 缓动函数 */
+  transition: 1s all ease-in-out;
+}
+
+/* 当 #page 有 menuopen 类时的样式 */
+#page.menuopen {
+  /* 降低元素的不透明度 */
+  opacity: 0.6;
+  /* 模糊元素，模糊半径为20像素 */
+  filter: blur(20px);
+  /* 放大元素，比例为1.2倍 */
+  transform: scale(1.2);
+}
+
+/* 区段样式 */
+section {
+  /* 使用 Flex 布局 */
+  display: flex;
+  /* 设置最小高度为视口高度 */
+  min-height: 100vh;
+  /* 设置内边距 */
+  padding: 50px;
+  /* 在主轴上居中对齐 */
+  justify-content: center;
+  /* 在交叉轴上居中对齐 */
+  align-items: center;
+  /* 设置背景颜色为深灰色 */
+  background: #222;
+  /* 设置文字颜色为白色 */
+  color: #fff;
+  /* 设置相对定位 */
+  position: relative;
+}
+
+/* 区段样式的伪元素 */
+section:after {
+  /* 添加内容为空 */
+  content: "";
+  /* 设置绝对定位 */
+  position: absolute;
+  /* 设置左边距 */
+  left: 0;
+  /* 设置顶边距 */
+  top: 0;
+  /* 设置背景颜色为黑色，透明度为0.5 */
+  background: #000;
+  /* 设置透明度 */
+  opacity: 0.5;
+  /* 设置高度为100% */
+  height: 100%;
+  /* 设置宽度为100% */
+  width: 100%;
+}
+
+/* 区段样式的标题 */
+section h1 {
+  /* 设置字体大小为120像素 */
+  font-size: 120px;
+  /* 设置外边距 */
+  margin: 0;
+  /* 设置层级为2 */
+  z-index: 2;
+  /* 设置相对定位 */
+  position: relative;
+}
+
+/* 页眉样式 */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 设置层级为99999 */
+  z-index: 99999;
+  /* 设置相对定位 */
+  position: relative;
+}
+
+
+/* 页眉导航样式 */
+header nav {
+  /* 使用 Flex 布局 */
+  display: flex;
+  /* 设置高度为100像素 */
+  height: 80px;
+  /* 在主轴上居中对齐 */
+  justify-content: center;
+  /* 在交叉轴上居中对齐 */
+  align-items: center;
+  /* 设置内边距 */
+  padding: 0 20px;
+  /* 设置固定定位 */
+  position: fixed;
+  /* 设置左边距为0 */
+  left: 0;
+  /* 设置右边距为0 */
+  right: 0;
+  /* 设置宽度为500像素 */
+  width: 800px;
+  /* 设置左右外边距为auto，使导航居中 */
+  margin: 0 auto;
+  /* 设置顶边距为120像素 */
+  top: 90px;
+  /* 设置背景颜色 */
+  background-color: rgba(255, 255, 255, 0.05);
+  /* 设置边框圆角 */
+  border-radius: 100px;
+  /* 设置层级为9 */
+  z-index: 9;
+  /* 设置背景模糊效果 */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  /* 设置边框 */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  /* 设置过渡效果 */
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+/* 页眉导航链接样式 */
+header nav a {
+  /* 设置文字颜色为白色 */
+  flex-grow: 1; /* 平均分配宽度 */
+  text-align: center; /* 文本居中 */
+  color: #fff;
+  /* 移除文本装饰 */
+  text-decoration: none;
+  /* 设置字体粗细 */
+  font-weight: 700;
+  /* 设置块级显示 */
+  display: block;
+  /* 设置内边距 */
+  padding: 10px 30px;
+  /* 设置行高 */
+  line-height: 1;
+  /* 设置字体大小为15像素 */
+  font-size: 20px;
+  /* 设置字母间距 */
+  letter-spacing: 2px;
+  /* 设置过渡效果 */
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+}
+header nav a.larger-font {
+  font-size: 30px; /* 设置更大的字体大小 */
+}
+
+header nav a:hover {
+  /* 字体放大 */
+  transform: scale(1.75);
+  /* 文字位置变暗 */
+  color: rgba(124, 124, 124, 0.8);
+  transition-delay: 0.2s;
+
+}
+
+header nav a:not(:hover) {
+  
+  transition-delay: 0.1s;
+}
+
+/* 页眉导航按钮样式 */
+header nav button {
+  /* 移除默认外观 */
+
+  /* -webkit-appearance: none; */
+  /* 设置背景颜色 */
+  background: rgba(0, 0, 0, 0.3);
+  /* 设置背景模糊效果 */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  /* 设置边框 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* 设置绝对定位 */
+  position: absolute;
+  /* 设置层级为99 */
+  z-index: 99;
+  /* 设置左边距为0 */
+  left: 0;
+  /* 设置右边距为0 */
+  right: 0;
+  /* 设置上边距为0 */
+  top: 0;
+  /* 设置下边距为0 */
+  bottom: 0;
+  /* 设置宽度为60像素 */
+  width: 160px; 
+  /* 设置高度为60像素 */
+  height: 160px;
+  margin: auto;
+  /* 设置边框圆角为100% */
+  border-radius: 100%;
+  /* 移除轮廓 */
+  outline: 0;
+  /* 设置鼠标样式为手型 */
+  border: 0;
+  /* 设置过渡效果 */
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  /* 设置初始缩放比例为0 */
+  transform: scale(0);
+}
+
+header nav button .music-icon {
+  font-size: 140px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(0.8);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(0.8);
+  }
+}
+
+/* 当页眉固定时的导航栏样式 */
+header.sticky nav {
+  /* 设置顶边距为20像素 */
+  /* animation: pulse 1s infinite; */
+  top: 200px;
+  /* 移除内边距 */
+  padding: 0;
+  /* 设置宽度为90像素 */
+  width: 190px;
+  /* 设置高度为90像素 */
+  height: 190px;
+  /* 设置过渡延迟时间 */
+  transition-delay: 0.5s;
+}
+
+header.sticky nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: ripple 1s linear infinite;
+}
+
+/* 定义波纹动画 */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+/* 当页眉固定时的导航按钮样式 */
+header.sticky nav button {
+  /* 设置初始缩放比例为1 */
+  transform: scale(1);
+  /* 设置过渡延迟时间 */
+  transition-delay: 0.6s;
+}
+
+
+/* 当页眉固定时的导航链接样式 */
+header.sticky nav a {
+  /* 移除内边距 */
+  padding: 0;
+  /* 设置不透明度为0 */
+  opacity: 0;
+  /* 设置字母间距为0像素 */
+  letter-spacing: 0px;
+  /* 设置缩放比例为0.3 */
+  transform: scale(0.3);
+  /* 设置过渡延迟时间 */
+  transition-delay: 0.2s;
+}
+
