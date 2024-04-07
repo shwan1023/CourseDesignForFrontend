@@ -1,0 +1,279 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@300;400;500;700&display=swap"); */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+nav ul,
+nav ul li {
+  outline: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* MAIN MENU */
+
+main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 15% 83%;
+  width: 100%; 
+  height: 88%; 
+  background: rgba(16, 21, 61, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+
+.main-menu {
+  width: 220px;
+
+  display: flex; /* 使用 Flex 布局 */
+  flex-direction: column; /* 垂直方向排列子元素 */
+  justify-content: space-between; /* 在主轴上均匀分布子元素 */
+  border-radius: 15px 0 0 15px; /* 设置左侧边框圆角 */
+  border-right: 1px solid rgba(255, 255, 255, 0.5); /* 设置右侧边框 */
+  padding: 12px 0 20px; /* 设置内边距 */
+  overflow: hidden; /* 隐藏溢出内容 */
+  font-family: inherit; /* 继承父元素字体样式 */
+
+}
+.user-info img {
+  padding: 12px 24px 6px;
+  border-radius: 50%;
+}
+
+.user-info p {
+  color: #fff;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1;
+  padding: 0 6px 32px;
+}
+
+/* 设置导航项（.nav-item）为块级元素 */
+.nav-item {
+  display: block;
+}
+
+/* 设置导航链接（.nav-item a）为 Flex 布局，并居中对齐 */
+.nav-item a {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  color: #fff; /* 设置文字颜色为白色 */
+  font-size: 1rem; /* 设置字体大小为1rem */
+  padding: 12px 0; /* 设置上下内边距为12像素，左右内边距为0 */
+  margin: 0 8px; /* 设置上下外边距为0，左右外边距为8像素 */
+  border-radius: 5px; /* 设置边框圆角为5像素 */
+}
+
+
+.nav-item.active a {
+  background: rgba(106, 109, 155, 0.5);
+  text-decoration: none;
+}
+
+.nav-icon {
+  width: 25px;
+  height: 20px;
+  font-size: 1.1rem;
+
+}
+
+.nav-text {
+  display: block;
+  width: 120px;
+  height: 20px;
+  letter-spacing: 0;
+}
+
+/* CONTENT */
+
+.content {
+  display: grid;
+  grid-template-columns: 75% 25%;
+} 
+
+/* LEFT CONTENT */
+
+.right-content {
+  padding: 10px 70px;
+  color: #e5e5e5;
+  overflow: auto;
+  max-height: 90%;
+}
+
+.list_card {
+ 
+  box-sizing: border-box;
+  width: 90%;
+  height: 150px;
+  background: rgba(222, 191, 224, 0.08);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+
+.card_text{
+  color: rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.my_account{
+  position: relative;
+  top: 50px;
+  left: 5%;
+}
+
+.my_musiclist{
+  position: relative;
+  top: 70px;
+  left: 5%;
+}
+
+.exit{
+  position: relative;
+  top: 100px;
+  left: 5%;
+}
+  
+  .list_card:hover {
+    border: 1px solid black;
+    transform: scale(1.03);
+  }
+  
+  .list_card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+  .card {
+    position: relative;
+    top: 30px;
+    left: 40px;
+    box-sizing: border-box;
+    width: 70%;
+    height: 90px;
+    background: #262626;
+  }
+  
+  .smallIcon {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 134, 134, 0.12);
+  }
+  
+  .smallIcon div {
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 
+    40%, #e5e5e5 48%);
+    margin-top: 10px;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+    color: #262626;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .Icon {
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    border-radius: 5px;
+  }
+  
+  .Name {
+    width: 90px;
+    height: 20px;
+    float: left;
+    transform: translate(10px ,0px);
+    border-radius: 5px;
+  }
+  
+  .Roles {
+    width: 40px;
+    height: 20px;
+    float: left;
+    transform: translate(20px ,0px);
+    border-radius: 5px;
+  }
+  
+  .Descripion {
+    margin: 10px;
+    width: 140px;
+    height: 45px;
+    float: left;
+    transform: translate(-130px ,30px);
+    border-radius: 5px;
+  }
+  
+  @keyframes load89234 {
+    100% {
+      background-position: -100% 0;
+    }
+  }
+
+  #iframe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9; /* 将 iframe 设置为足够高的 z-index 值 */
+  }
+  #iframe-container iframe {
+    width: 100%;
+    height: 100%;
+  }

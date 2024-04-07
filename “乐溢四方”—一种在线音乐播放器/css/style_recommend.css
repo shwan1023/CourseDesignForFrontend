@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url('../materials/download.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* 背景 */
+.container {
+  position: relative;
+  width: 100vw; 
+  height: 70vh; 
+
+}
+
+.app_picture_container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(167, 165, 165, 0.5);
+  z-index: 0;
+}
+
+
+/* 下载按钮 */
+.Download_button {
+  z-index: 3;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  border-radius: 7px;
+  border: none;
+  background: #1875FF;
+  color: white;
+  font-family: inherit;
+  text-align: center;
+  font-size: 13px;
+  box-shadow: 0px 14px 56px -11px #1875FF;
+  width: 20em;
+  padding: 2em;
+  transition: all 0.4s;
+  cursor: pointer;
+  vertical-align:middle
+ }
+ 
+ .Download_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+ }
+ 
+ .Download_button span:after {
+  content: '开启新世界';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.7s;
+ }
+ 
+ .Download_button:hover span {
+  padding-right: 5em;
+ }
+ 
+ .Download_button:hover span:after {
+  opacity: 4;
+  right: 0;
+ }
+
+ 
+.text {
+  color: rgb(121, 190, 133);
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about_app{
+  margin-top: 20px;
+  align-self: center;
+}
+
+
+
+.nav_1 {
+	position: absolute;
+  top: 100%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: #443d3d;
+}
+
+.nav_1 li {
+	display: inline-block;
+	padding: 24px 10px;
+}
+
+.nav_1 li a {
+	color: #757575;
+	text-transform: uppercase;
+}
+
+.button_list {
+  height: 2.8em;
+  width: 9em;
+  background: transparent;
+  background-color: aliceblue;
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+  border: 2px solid #016dd9;
+  outline: none;
+  color: #016dd9;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.button_list:hover {
+  background: #016dd9;
+  color: #463939;
+  animation: squeeze3124 0.9s both;
+}
+
+@keyframes squeeze3124 {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

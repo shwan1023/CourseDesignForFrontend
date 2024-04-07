@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts 示例</title>
+    <link rel="stylesheet" href="./css/mv_play.css">
+    <link rel="stylesheet" href="./css/share.css">
+
+    <style>
+
+
+
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+<main>
+
+    <iframe src="./base0.html" style="width:90%; height:100%; border:none;"></iframe>
+
+    <div class="right-content" style="padding: 7% 70px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+
+      <div id="pie-chart" style="width: 400px; height: 400px;"></div>
+      <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('pie-chart'));
+        var option = {
+          title: {
+            text: '用户喜好分布',
+            left: 'center'
+          },
+          tooltip: {
+            trigger: 'item'
+          },
+          legend: {
+            orient: 'vertical',
+            left: 'left',
+          },
+          series: [
+            {
+              name: '喜好',
+              type: 'pie',
+              radius: '50%',
+              data: [
+                { value: 1048, name: '流行' },
+                { value: 735, name: '摇滚' },
+                { value: 580, name: '电子' },
+                { value: 484, name: '爵士' },
+                { value: 300, name: '古典' }
+              ],
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+              }
+            }
+          ]
+        };
+        myChart.setOption(option);
+      </script>
+      
+      <div id="bar-chart" style="width: 400px; height: 400px; "></div>
+      <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('bar-chart'));
+        var option = {
+          title: {
+            text: '每月用户活跃度'
+          },
+          tooltip: {},
+          xAxis: {
+            data: ["1月","2月","3月","4月","5月","6月"]
+          },
+          yAxis: {},
+          series: [{
+            name: '活跃度',
+            type: 'bar',
+            data: [500, 200, 360, 100, 1000, 920]
+          }]
+        };
+        myChart.setOption(option);
+      </script>
+      
+      <div id="line-chart" style="width: 400px; height: 400px; "></div>
+      <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('line-chart'));
+        var option = {
+          title: {
+            text: '年度音乐播放量'
+          },
+          tooltip: {
+            trigger: 'axis'
+          },
+          xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月']
+          },
+          yAxis: {
+            type: 'value'
+          },
+          series: [{
+            name: '播放量',
+            type: 'line',
+            data: [820, 932, 901, 934, 1290, 1330, 1320]
+          }]
+        };
+        myChart.setOption(option);
+      </script>
+      
+
+
+     </div>
+     
+     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+      <div id="radar-chart" style="width: 400px; height: 400px; "></div>
+      <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('radar-chart'));
+        var option = {
+          title: {
+            text: '歌手综合实力评分'
+          },
+          tooltip: {},
+          radar: {
+              indicator: [
+                 { name: '唱功', max: 100},
+                 { name: '舞蹈', max: 100},
+                 { name: '作曲', max: 100},
+                 { name: '人气', max: 100},
+                 { name: '商业价值', max: 100}
+              ]
+          },
+          series: [{
+              name: '歌手对比',
+              type: 'radar',
+              data : [
+                  {
+                      value : [97, 42, 88, 94, 90],
+                      name : '歌手A'
+                  },
+                   {
+                      value : [77, 32, 74, 95, 88],
+                      name : '歌手B'
+                  }
+              ]
+          }]
+        };
+        myChart.setOption(option);
+      </script>
+      
+      
+      <div id="scatter-chart" style="width: 400px; height: 400px;"></div>
+      <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('scatter-chart'));
+        var option = {
+          title: {
+            text: '用户年龄与听歌时间分布'
+          },
+          xAxis: {},
+          yAxis: {},
+          series: [{
+            symbolSize: 20,
+            data: [
+              [10, 8], [15, 5], [20, 6], [25, 10], [30, 15], [35, 20], [40, 25], [45, 30], [50, 35]
+            ],
+            type: 'scatter'
+          }]
+        };
+        myChart.setOption(option);
+      </script>
+
+      <div id="page-visit-count" style="width: 400px; height: 400px; "></div>
+      <script>
+          var visitCount = localStorage.getItem('visitCount');
+          if (visitCount) {
+              visitCount = parseInt(visitCount, 10) + 1;
+          } else {
+              visitCount = 1;
+          }
+          localStorage.setItem('visitCount', visitCount);
+          var myChart = echarts.init(document.getElementById('page-visit-count'));
+          var option = {
+              graphic: [
+                  {
+                      type: 'text',
+                      left: 'center',
+                      top: '40%',
+                      style: {
+                          text: '这个页面被访问了',
+                          fontSize: 20,
+                          fill: 'white'
+                      }
+                  },
+                  {
+                      type: 'text',
+                      left: 'center',
+                      top: '50%',
+                      style: {
+                          text: visitCount,
+                          fontSize: 50,
+                          fontWeight: 'bold',
+                          fill: 'white'
+                      }
+                  },
+                  {
+                      type: 'text',
+                      left: 'center',
+                      top: '65%',
+                      style: {
+                          text: '次',
+                          fontSize: 20,
+                          fill: 'white'
+                      }
+                  }
+              ]
+          };
+          myChart.setOption(option);
+       </script>
+
+    </div>
+
+  </div>
+
+</main>
+
+<div id="iframe-container">
+  <iframe src="./base1.html" frameborder="0"></iframe>
+</div>
+<script  src="./js/share.js"></script>
+
+</body>
+</html>

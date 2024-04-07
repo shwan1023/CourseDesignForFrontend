@@ -1,0 +1,19 @@
+#iframe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9; /* 将 iframe 设置为足够高的 z-index 值 */
+  }
+  #iframe-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  body{
+
+    background-image: url(../img/bk.png);
+  
+  }
+
+  

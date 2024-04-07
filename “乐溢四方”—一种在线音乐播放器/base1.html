@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./css/base1.css">
+    <link rel="stylesheet" type="text/css" href="./fontawesome-free-6.5.1-web/css/all.css">
+</head>
+
+<body id="body">
+    <div class="allup-container" background = "../img/bg0.png"; >
+        <div class="upper-container" >
+            <!-- 唱片背景 -->
+    
+    
+            <div class="record-container">
+                <div class="record-bg">
+                    <div id="record-img" class="rotate-play"></div>
+                </div>
+            </div>
+    
+    
+            
+            <!-- 音乐介绍 -->
+            <div class="introduction-container">
+                <div class="text-container">
+                    <div id="music-title">音乐1</div>
+                    <div class="author-container">作者：
+                        <span id="author-name">未知</span>
+                    </div>
+                </div>
+            </div>
+           
+    
+            <div class="lyrics-container">
+            <ul class="lrc-list">
+            </ul>
+            </div>
+            
+
+
+            
+            
+        
+    
+        </div>
+        <div class="comments-container">
+            <div class="comment-title">
+                热门评论
+            </div>
+                
+        
+            <ul class="hot-comment-list">
+                <li class="hot-comment-item">
+                    <div class="comment-avatar">
+        
+                     
+                    <img src="./materials/touxiang.jpg">
+                    </div>
+                    <div class="comment-content">
+                        <div class="hot-comment-author">甄的食尼鸭</div>
+                        <div class="hot-comment-text">这首歌太好听了！这首歌太好听了！这首歌太好听了！这首歌太好听了！这首歌太好听了！</div>
+                    </div>
+                    <div class="like-wrapper"  id="likesong">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span class="like-count">11551</span>
+                    </div>
+                </li>
+                <li class="hot-comment-item">
+                    <div class="comment-avatar">
+              
+            
+                        <img src="./materials/touxiang.jpg">
+                    </div>
+                    <div class="comment-content">
+                        <div class="hot-comment-author">甄的食尼鸭</div>
+                        <div class="hot-comment-text">这首歌太好听了！这首歌太好听了！这首歌太好听了！这首歌太好听了！这首歌太好听了！这首歌太好听了！这首歌太好听了！这首歌太好听了！</div>
+                    </div>
+    
+                    <div class="like-wrapper"  id="likesong">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span class="like-count">11000</span>
+                    </div>
+    
+                </li>
+    
+            </ul>
+        </div>
+    </div>
+    
+   
+
+    <!-- 音乐播放器主要内容 -->
+    <div class="audio-box">
+
+        <div class="song-info">
+            <!-- 歌曲封面 -->
+            <div id = "cover-img" class="album-cover"></div>
+            <!-- 歌曲名称和歌手 -->
+            <div class="song-details">
+                <p id ="song-title">歌曲名</p>
+                <p id ="song-artist">歌手名</p>
+            </div>
+        </div>
+
+
+        <div class="audio-container">
+            <audio id="audioTag"></audio>
+            <!-- 进度条 -->
+            <div class="a-progress">
+                <div class="pgs-total" id="progress-total">
+                    <div class="pgs-play" id="progress" style="width: 0%;"></div>
+                </div>
+            </div>
+            <!-- 下排控制按钮 -->
+            <div class="a-controls">
+                <!-- 播放时长 -->
+                <div class="time-container">
+                    <span class="played-time" id="playedTime">00:00</span>&nbsp;/&nbsp;
+                    <span class="audio-time" id="audioTime">00:00</span>
+                </div>
+                <!-- 中间按钮 -->
+                <div class="center-button-container">
+                    <!-- 播放模式 -->
+                    <div id="playMode" class="center-icon mode"></div>
+                    <!-- 上一首 -->
+                    <div id="skipForward" class="center-icon s-right"></div>
+                    <!-- 暂停按钮 -->
+                    <div id="playPause" class="icon-play"></div>
+                    <!-- 下一首 -->
+                    <div id="skipBackward" class="center-icon s-left"></div>
+                    <!-- 音量调节 -->
+                    <div id="volume" class="center-icon volume"></div>
+                    <!-- 音量悬浮窗 -->
+                    <input type="range" id="volumn-togger" name="change" value="70" min="0" max="100" step="1">
+                </div>
+                <!-- 后部按钮 -->
+                <div class="bottom-button-container">
+                    <!-- 列表 -->
+                    <div id="list" class="bottom-icon list"></div>
+                    <!-- 倍速 -->
+                    <div id="speed" class="speed">1.0X</div>
+                    <!-- MV -->
+                    <div id="MV" class="bottom-icon MV"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 音乐列表 -->
+    <div class="close-list" id="close-list">
+        
+    </div>
+    <div class="music-list" id="music-list">
+        <div class="music-list-container">
+            <div class="music-list-title">播放队列</div>
+            <hr class="line">
+            <div class="all-list">
+                <div id="music0">江南</div>
+                <div id="music1">背对背拥抱</div>
+                <div id="music2">青花瓷</div>
+       
+
+            </div>
+        </div>
+    </div>
+    <script src="./js/base1.js"></script>
+   
+    
+</body>
+
+</html>

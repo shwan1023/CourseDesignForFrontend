@@ -1,0 +1,226 @@
+
+body {
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+main {
+  
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 15% 83%;
+    width: 100%; 
+    height: 88%; 
+    background: rgba(16, 21, 61, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+      0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+  }
+
+
+  .right-content {
+    padding: 10px 70px;
+    color: #e5e5e5;
+    overflow: auto;
+    max-height: 90%;
+  }
+  
+
+  #iframe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9; /* 将 iframe 设置为足够高的 z-index 值 */
+  }
+  #iframe-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* 自定义滚动条宽度和外观 */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* 自定义滚动条滑块颜色 */
+  }
+
+  .upper-container {
+  
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content:space-between; /* 在主轴上均匀分布子元素 */
+    width: 80%;
+  }
+
+
+  .vd{
+    margin-top:40px;
+    
+    text-align:left;
+
+  }
+
+
+
+  /* 相关推荐 */
+
+
+  
+.related-content {
+  width: 200px;
+  margin-left: 20px;
+}
+
+.mv-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+
+.mv-info {
+  flex: 1;
+}
+
+.mv-title {
+  margin: 0 0 5px;
+}
+
+.mv-artist {
+  margin: 0;
+  color: #666;
+}
+
+
+.mv-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden; /* 添加溢出隐藏，确保图片不溢出容器 */
+}
+
+
+
+.mv-cover img {
+  width: 100%; /* 让图片填充容器 */
+  height: 100%; /* 让图片填充容器 */
+  border-radius: inherit;
+  object-fit: cover;
+}
+.mv-cover .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(169, 150, 253, 0.6);
+  border-radius: inherit;
+  font-size: 1.75rem;
+  opacity: 0;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+
+
+
+.mv-cover:hover .overlay {
+  opacity: 1;
+}
+  /* 评论区 */
+  
+
+  .comments-container {
+    margin-top: 20px; /* 添加像素单位 */
+    margin-left: 20px; /* 添加像素单位 */
+    display: flex;
+    flex-direction: column; /* 垂直方向排列子元素 */
+    width: 90%;
+    height: 40%; /* 内容与边框之间的间距 */
+    border-radius: 5px; /* 边框圆角 */
+    float: center; /* 这里的值应该是 center */
+  
+    transition: max-height 0.3s ease; /* 添加过渡效果 */
+  }
+  
+
+.hot-comment-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* 垂直方向排列子元素 */
+
+}
+
+.hot-comment-item {
+  padding: 10px;
+  margin-bottom: 10px;
+
+  background-color: rgba(255, 255, 255, 0.6);
+
+  border-radius: 5px;
+  display: block;
+  display: flex;
+  flex-direction: row; /* 垂直方向排列子元素 */
+}
+
+.hot-comment-author {
+  font-weight: bold;
+  color: #333;
+}
+
+.hot-comment-content {
+  margin-top: 5px;
+  color: #555;
+}
+.comment-title{
+ height: 8%;
+ font-size: 20px;
+ color: #f7f7f7;
+}
+.comment-avatar {
+  margin-right: 10px; /* 头像框与评论内容之间的间距 */
+}
+
+.comment-avatar img {
+  width: 50px; /* 设置头像框的宽度 */
+  height: 50px; /* 设置头像框的高度 */
+  border-radius: 50%; /* 将头像框变为圆形 */
+}
+
+.like-wrapper {
+  margin-left: auto;
+  margin-top: auto; 
+  display: flex;
+  align-items: center;
+  color: #000000; /* 设置 Font Awesome 图标的颜色 */
+}
+
+.like-wrapper i {
+  margin-right: 5px; /* 图标和数量之间的间距 */
+   color: #4d5661; /* 点击时背景颜色 */
+}
+
+.like-wrapper i.clicked {
+ margin-right: 5px; /* 图标和数量之间的间距 */
+ color: #ff0000; 
+}
